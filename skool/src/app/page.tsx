@@ -21,6 +21,7 @@ const SampleData = [
 ];
 export default function Home() {
 
+
   return (
     <>
     <div className="bg-[#f8f7f5] justify-center align-middle">

@@ -65,7 +65,7 @@ const ButtonComponent = () => {
         >
           Filter
                 {showFilter && (
-            <div className="absolute top-full left-0 mt-2 p-4 bg-white border rounded-lg shadow text-custom-black flex flex-row">
+            <div className="absolute top-full left-0 mt-2 p-4 z-10 bg-white border rounded-lg shadow text-custom-black flex flex-row">
             <div>
             <label className="font-bold">Type</label>
             <div className="flex flex-col p-2">
