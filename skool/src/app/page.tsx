@@ -4,6 +4,7 @@ import Search from "./components/search";
 import ButtonComponent from "./components/button";
 import Card from "./components/profileCards";
 import React, { useState } from 'react';
+import Logo from "./components/logo";
 
 
 
@@ -56,8 +57,8 @@ const Home: React.FC = () => {
   return (
     <>
     <div className="bg-[#f8f7f5] justify-center align-middle">
-    <div className="bg-white min-h-[64px]">
-      <h1>logo</h1>
+    <div className="bg-white min-h-[64px] pr-[450px] pl-[450px] pt-2 pb-2">
+    <Logo/>
     </div>
     <div className="col-span-3"></div>
     <div className="justify-center align-center min-w-[1px]  row-span-12">
