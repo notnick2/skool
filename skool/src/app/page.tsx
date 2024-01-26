@@ -3,24 +3,54 @@
 import Search from "./components/search";
 import ButtonComponent from "./components/button";
 import Card from "./components/profileCards";
-import Page from "./components/page";
+import React, { useState } from 'react';
 
-const SampleData = [
+
+
+type SampleDataItem = {
+  id: number;
+  banner: string;
+  ranking: string;
+  profilePicture: string;
+  profileName: string;
+  description: {
+    data: string;
+    type: string;
+    members: string;
+    price: string;
+  };
+};
+
+// Example usage with your provided data
+const SampleData: SampleDataItem[] = [
   {
     id: 1,
-    banner: ' https://placedog.net/300/200?random',
+    banner: 'https://placedog.net/300/200?random',
     ranking: '#1',
-    profilePicture: ' https://placedog.net/50/50?random',
+    profilePicture: 'https://placedog.net/50/50?random',
     profileName: 'John Doe',
     description: {
-      data: 'best community of die hard fans we are fans die hard fans',
+      data: 'best community of die-hard fans we are fans die-hard fans',
       type: 'Private',
       members: '50k Members',
       price: 'Free',
     },
   },
 ];
+
+
 const Home: React.FC = () => {
+  const cardsPerPage = 30; // 3 columns * 10 rows
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const totalPages = Math.ceil(SampleData.length / cardsPerPage);
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = SampleData.slice(indexOfFirstCard, indexOfLastCard);
+
+  const onPageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
   
 
   return (
@@ -46,13 +76,13 @@ const Home: React.FC = () => {
             <Card key={data.id} {...data} />
           ))}
         </div>
-      ))}
-     
+      ))} 
+    </div>
+  
+    </div>
     </div>
    
-    </div>
-   
-    </div>
+  
     </>
   );
 }

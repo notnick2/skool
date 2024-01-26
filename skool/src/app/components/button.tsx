@@ -109,7 +109,7 @@ const ButtonComponent = () => {
             </div>
             </div>
 
-            <div className=" border-l  border-custom-black">
+            <div className=" border-l pl-2 border-custom-black">
             <label className='font-bold'>Price</label>
             <div className="flex flex-col p-2">
                 <div className="flex items-center mr-4">
