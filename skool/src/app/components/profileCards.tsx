@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 
 interface CardProps {
   banner: string;
@@ -15,8 +16,10 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ banner, ranking, profilePicture, profileName, description }) => {
+
+
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-lg relative">
+    <Link href={`/${profileName}`}  className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-lg relative">
       <img className="w-full" src={banner} alt="Card Banner" />
       <div className="px-6 py-4">
         <div className="flex items-center mb-2">
@@ -39,7 +42,7 @@ const Card: React.FC<CardProps> = ({ banner, ranking, profilePicture, profileNam
           <p>{`${description.price}`}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

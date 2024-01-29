@@ -4,14 +4,14 @@ const Search: React.FC = (): ReactElement => {
   return (
     <div className="pt-2 relative mx-auto text-gray-600">
       <input
-        className="border-2 border-gray-300 bg-white h-10 px-5 pr-[250px] rounded-lg text-sm focus:outline-none"
+        className="border-2 border-gray-100 bg-white h-14 px-5 min-w-[650px] pr-[250px] rounded-lg text-sm focus:outline-none"
         type="search"
         name="search"
         placeholder="Search for anything"
       />
-      <button type="submit" className="absolute right-0 top-0 mt-5 mr-4">
+      <button type="submit" className="absolute right-0 top-0 mt-5 mr-4 pt-1">
         <svg
-          className="text-gray-600 h-4 w-4 fill-current"
+          className="text-gray-600 h-5 w-5 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
           version="1.1"
